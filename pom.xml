@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.oasis</groupId>
+    <artifactId>easy-orm-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--引用github上的maven依赖jar-->
+    <repositories>
+        <repository>
+            <id>mvn-repo-easy-orm</id>
+            <!--url: https://raw.github.com/仓库拥有者名字(非登录名)/项目名字/分支-->
+            <url>https://raw.github.com/zybotian/mvn-repo/easy-orm</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!--引用github上的mvn依赖-->
+        <dependency>
+            <groupId>org.oasis</groupId>
+            <artifactId>easy-orm</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- 测试 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- h2内存数据库,测试用-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.196</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
